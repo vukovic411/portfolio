@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="style/book.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">🏠 Почетна</a></li>
+          <li><a href="weather.html">🌦️ Време</a></li>
+          <li><a href="movie.html">🎬 Филмови</a></li>
+          <li><a href="book.html" class="active">📚 Књиге</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>📚 Проналажење књига</h1>
+      <p class="subtitle">
+        Унеси назив књиге или аутора да претражиш преко Open Library API.
+      </p>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Пример: Harry Potter, Tolkien, Tesla..."
+        />
+        <button id="searchBtn">Претражи</button>
+      </div>
+
+      <div class="book-container">
+        <!-- Овде ће JS динамички убацивати картице књига -->
+      </div>
+      <div id="bookContainer" class="book-container"></div>
+
+      <div id="loader" class="loader" style="display: none"></div>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Marko Vukovic</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/book.js"></script>
+  </body>
+</html>

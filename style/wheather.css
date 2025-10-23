@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #3f87a6, #ebf8e1);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.container {
+  background-color: white;
+  display: inline-block;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #3f87a6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #336b84;
+}
+
+.weather {
+  margin-top: 20px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}

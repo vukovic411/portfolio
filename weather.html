@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/wheather.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1 class="naslov">Провери време</h1>
+
+    <div class="container">
+      <input type="text" id="cityInput" placeholder="Унеси град..." />
+      <button id="searchBtn">Тражи</button>
+
+      <div class="weather" style="display: none">
+        <h2>Град: <span class="city"></span></h2>
+        <h3>Температура: <span class="temperature"></span>°C</h3>
+        <p>Време: <span class="description"></span></p>
+        <img class="icon" alt="Икона времена" />
+      </div>
+    </div>
+
+    <script src="js/scriptWeather.js"></script>
+  </body>
+</html>

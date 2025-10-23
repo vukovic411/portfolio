@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style/mainPage.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="weather.html">🌦️ Weather</a></li>
+          <li><a href="pigGame.html">🐷 Pig Game</a></li>
+          <li><a href="guessNumber.html">🔢 Guess My Number</a></li>
+          <li><a href="movie.html">🎬 Movie App</a></li>
+          <li><a href="book.html" class="active">📚 Books</a></li>
+          <li><button id="switchLang">EN / SR</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about">
+        <img src="img/profile.png" alt="Profile picture" class="profile-pic" />
+        <div class="about-text">
+          <h1 data-sr="Zdravo, ja sam Marko 👋" data-en="Hi, I'm Marko 👋">
+            Zdravo, ja sam Marko 👋
+          </h1>
+          <p
+            data-sr="Dobrodošao na moju ličnu stranicu projekata! Ovde možeš pronaći sve aplikacije koje sam napravio tokom učenja JavaScript-a — od igara do API projekata kao što su aplikacije za vreme i filmove."
+            data-en="Welcome to my personal projects page! Here you can find all apps I made while learning JavaScript — from games to API projects like weather and movie apps."
+          >
+            Dobrodošao na moju ličnu stranicu projekata! Ovde možeš pronaći sve
+            aplikacije koje sam napravio tokom učenja JavaScript-a — od igara do
+            API projekata kao što su aplikacije za vreme i filmove.
+          </p>
+          <p>
+            <strong>Veštine:</strong> HTML, CSS, JavaScript, API integracije
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/vukovic411" target="_blank"
+              >markovukovic</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2>Moji projekti</h2>
+        <div class="project-grid">
+          <div class="card">
+            <h3 data-sr="🌦️ Weather App" data-en="🌦️ Weather App">
+              🌦️ Weather App
+            </h3>
+            <p
+              data-sr="Proveri trenutnu temperaturu i vremenske uslove u svom gradu."
+              data-en="Check the current temperature and weather conditions in your city."
+            >
+              Proveri trenutnu temperaturu i vremenske uslove u svom gradu.
+            </p>
+            <a href="weather.html" class="btn" data-sr="Pogledaj" data-en="View"
+              >Pogledaj</a
+            >
+          </div>
+
+          <div class="card">
+            <h3 data-sr="🎬 Movie Search" data-en="🎬 Movie Search">
+              🎬 Movie Search
+            </h3>
+            <p
+              data-sr="Pretraži filmove i otkrij detalje o svojim omiljenim naslovima."
+              data-en="Search movies and discover details about your favorite titles."
+            >
+              Pretraži filmove i otkrij detalje o svojim omiljenim naslovima.
+            </p>
+            <a href="movie.html" class="btn" data-sr="Pogledaj" data-en="View"
+              >Pogledaj</a
+            >
+          </div>
+
+          <div class="card">
+            <h3 data-sr="🐷 Pig Game" data-en="🐷 Pig Game">🐷 Pig Game</h3>
+            <p
+              data-sr="Zabavna društvena igra za dvoje — ko prvi stigne do 100 poena!"
+              data-en="Fun two-player game — first to reach 100 points wins!"
+            >
+              Zabavna društvena igra za dvoje — ko prvi stigne do 100 poena!
+            </p>
+            <a href="pigGame.html" class="btn" data-sr="Igraj" data-en="Play"
+              >Igraj</a
+            >
+          </div>
+
+          <div class="card">
+            <h3 data-sr="🔢 Guess My Number" data-en="🔢 Guess My Number">
+              🔢 Guess My Number
+            </h3>
+            <p
+              data-sr="Pogodi broj koji je zamislio računar! Imaš li sreće?"
+              data-en="Guess the number the computer thought of! Are you lucky?"
+            >
+              Pogodi broj koji je zamislio računar! Imaš li sreće?
+            </p>
+            <a
+              href="guessNumber.html"
+              class="btn"
+              data-sr="Igraj"
+              data-en="Play"
+              >Pokušaj</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Marko Vukovic</p>
+    </footer>
+
+    <script>
+      // Footer godina
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Switch jezika
+      let currentLang = 'sr';
+      document.getElementById('switchLang').addEventListener('click', () => {
+        currentLang = currentLang === 'sr' ? 'en' : 'sr';
+        document.querySelectorAll('[data-sr]').forEach(el => {
+          el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.sr;
+        });
+      });
+    </script>
+  </body>
+</html>

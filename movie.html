@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/movie.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>🎬 Movie Explorer</h1>
+      <nav>
+        <a href="index.html">Početna</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Unesite naziv filma..."
+        />
+        <button id="searchBtn">Pretraži</button>
+      </div>
+
+      <div class="filters">
+        <label for="yearFilter">Godina:</label>
+        <input type="number" id="yearFilter" placeholder="npr. 2010" />
+
+        <label for="genreFilter">Žanr:</label>
+        <select id="genreFilter">
+          <option value="">Svi</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+        </select>
+        <br />
+      </div>
+
+      <div id="moviesContainer" class="movies"></div>
+    </main>
+
+    <footer>
+      <p>Marko Vuković - Movie Explorer © 2025</p>
+    </footer>
+
+    <script src="js/movie.js"></script>
+  </body>
+</html>
