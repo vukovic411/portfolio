@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}&plot=full`
-      );
+      // details.js
+      const response = await fetch(`/movies?id=${movieId}`);
+
       const data = await response.json();
 
       if (data.Response === 'False') {

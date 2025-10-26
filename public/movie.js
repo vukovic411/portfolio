@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
+      // movie.js
       const response = await fetch(
-        `https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`
+        `/movies?query=${encodeURIComponent(query)}`
       );
+
       const data = await response.json();
 
       if (data.Response === 'False') {
