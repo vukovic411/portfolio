@@ -3,165 +3,320 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Marko Vuković - Web Developer Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="mainPage.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="weather.html">🌦️ Weather</a></li>
-          <li><a href="pigGame.html">🐷 Pig Game</a></li>
-          <li><a href="guessNumber.html">🔢 Guess My Number</a></li>
-          <li><a href="movie.html">🎬 Movie App</a></li>
-          <li><a href="book.html" class="active">📚 Books</a></li>
-          <li><a href="xoGame.html">❌⭕ X-O Game</a></li>
+          <li><a href="#home">🏠 Početna</a></li>
+          <li><a href="#about">👤 O meni</a></li>
+          <li><a href="#projects">🚀 Projekti</a></li>
+          <li><a href="#tech">💻 Tehnologije</a></li>
+          <li><a href="#contact">📞 Kontakt</a></li>
           <li><button id="switchLang">EN / SR</button></li>
         </ul>
       </nav>
     </header>
 
+    <!-- HERO SEKCIJA -->
+    <section class="hero" id="home">
+      <h1
+        data-sr="🎯 Marko Vuković - Web Developer"
+        data-en="🎯 Marko Vuković - Web Developer"
+      >
+        🎯 Marko Vuković - Web Developer
+      </h1>
+      <p
+        class="subtitle"
+        data-sr="Kreiram interaktivne i funkcionalne web aplikacije sa JavaScript-om"
+        data-en="Creating interactive and functional web applications with JavaScript"
+      >
+        Kreiram interaktivne i funkcionalne web aplikacije sa JavaScript-om
+      </p>
+      <div class="hero-buttons">
+        <a
+          href="#projects"
+          class="btn-primary"
+          data-sr="Pogledaj moje projekte"
+          data-en="View My Projects"
+        >
+          Pogledaj moje projekte
+        </a>
+        <a
+          href="#contact"
+          class="btn-secondary"
+          data-sr="Kontaktiraj me"
+          data-en="Contact Me"
+        >
+          Kontaktiraj me
+        </a>
+      </div>
+    </section>
+
     <main>
-      <section class="about">
-        <img src="img/profile.png" alt="Profile picture" class="profile-pic" />
+      <!-- ABOUT SEKCIJA -->
+      <section class="about" id="about">
+        <img src="img/profile.png" alt="Profile" class="profile-pic" />
         <div class="about-text">
-          <h1 data-sr="Zdravo, ja sam Marko 👋" data-en="Hi, I'm Marko 👋">
-            Zdravo, ja sam Marko 👋
-          </h1>
+          <h2 data-sr="O meni" data-en="About Me">O meni</h2>
           <p
-            data-sr="Dobrodošao na moju ličnu stranicu projekata! Ovde možeš pronaći sve aplikacije koje sam napravio tokom učenja JavaScript-a — od igara do API projekata kao što su aplikacije za vreme i filmove."
-            data-en="Welcome to my personal projects page! Here you can find all apps I made while learning JavaScript — from games to API projects like weather and movie apps."
+            data-sr="Ja sam mladi web developer iz Srbije sa strašću za JavaScript-om i web tehnologijama. Trenutno učim i stvaram razne web aplikacije, od jednostavnih igara do API projekata."
+            data-en="I'm a young web developer from Serbia passionate about JavaScript and web technologies. Currently learning and creating various web applications, from simple games to API projects."
           >
-            Dobrodošao na moju ličnu stranicu projekata! Ovde možeš pronaći sve
-            aplikacije koje sam napravio tokom učenja JavaScript-a — od igara do
-            API projekata kao što su aplikacije za vreme i filmove.
+            Ja sam mladi web developer iz Srbije sa strašću za JavaScript-om i
+            web tehnologijama. Trenutno učim i stvaram razne web aplikacije, od
+            jednostavnih igara do API projekata.
           </p>
-          <p>
-            <strong>Veštine:</strong> HTML, CSS, JavaScript, API integracije
+          <p
+            data-sr="Specijalizujem se za frontend razvoj i rad sa vanjskim API-jima. Moj cilj je da budem Full-stack developer i da kreiram aplikacije koje rešavaju prave probleme."
+            data-en="I specialize in frontend development and working with external APIs. My goal is to become a Full-stack developer and create applications that solve real problems."
+          >
+            Specijalizujem se za frontend razvoj i rad sa vanjskim API-jima. Moj
+            cilj je da budem Full-stack developer i da kreiram aplikacije koje
+            rešavaju prave probleme.
           </p>
-          <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/vukovic411" target="_blank"
-              >markovukovic</a
-            >
-          </p>
+          <div class="skills-badge">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript ES6+</span>
+            <span class="skill-tag">API Integration</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
         </div>
       </section>
 
-      <section class="projects">
-        <h2>Moji projekti</h2>
+      <!-- STATS SEKCIJA -->
+      <section class="stats">
+        <div class="stat-item">
+          <h3>6+</h3>
+          <p data-sr="Projekata" data-en="Projects">Projekata</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p data-sr="Dedikovan" data-en="Dedicated">Dedikovan</p>
+        </div>
+        <div class="stat-item">
+          <h3>3+</h3>
+          <p data-sr="Godina učenja" data-en="Years Learning">Godina učenja</p>
+        </div>
+        <div class="stat-item">
+          <h3>∞</h3>
+          <p data-sr="Mogućnosti" data-en="Possibilities">Mogućnosti</p>
+        </div>
+      </section>
+
+      <!-- TECHNOLOGIES SEKCIJA -->
+      <section class="technologies" id="tech">
+        <h2 data-sr="Tehnologije" data-en="Technologies">Tehnologije</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="fab fa-html5"></i>
+            <p>HTML5</p>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS3</p>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-js-square"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-github"></i>
+            <p>Git/GitHub</p>
+          </div>
+          <div class="tech-item">
+            <i class="fas fa-code-branch"></i>
+            <p>REST APIs</p>
+          </div>
+          <div class="tech-item">
+            <i class="fas fa-mobile-alt"></i>
+            <p>Responsive</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SEKCIJA -->
+      <section class="projects" id="projects">
+        <h2 data-sr="Moji Projekti" data-en="My Projects">Moji Projekti</h2>
         <div class="project-grid">
           <div class="card">
-            <h3 data-sr="🌦️ Weather App" data-en="🌦️ Weather App">
-              🌦️ Weather App
-            </h3>
+            <h3>🌦️ Weather App</h3>
             <p
-              data-sr="Proveri trenutnu temperaturu i vremenske uslove u svom gradu."
-              data-en="Check the current temperature and weather conditions in your city."
+              data-sr="Aplikacija koja prikazuje trenutno vreme u odabranom gradu koristeći OpenWeather API. Lep interfejs i brza pretraga."
+              data-en="App that displays current weather in selected city using OpenWeather API. Beautiful interface and fast search."
             >
-              Proveri trenutnu temperaturu i vremenske uslove u svom gradu.
+              Aplikacija koja prikazuje trenutno vreme u odabranom gradu
+              koristeći OpenWeather API.
             </p>
-            <a href="weather.html" class="btn" data-sr="Pogledaj" data-en="View"
-              >Pogledaj</a
-            >
+            <div class="card-footer">
+              <span>API</span>
+              <a
+                href="weather.html"
+                class="btn-view"
+                data-sr="Otvori"
+                data-en="Open"
+                >Otvori</a
+              >
+            </div>
           </div>
 
           <div class="card">
-            <h3 data-sr="🎬 Movie Search" data-en="🎬 Movie Search">
-              🎬 Movie Search
-            </h3>
+            <h3>🎬 Movie Explorer</h3>
             <p
-              data-sr="Pretraži filmove i otkrij detalje o svojim omiljenim naslovima."
-              data-en="Search movies and discover details about your favorite titles."
+              data-sr="Pretraživač filmova sa filtrima po godini i žanru. Detaljan prikaz informacija o svakom filmu iz IMDb baze."
+              data-en="Movie search engine with filters by year and genre. Detailed information display about each movie from IMDb database."
             >
-              Pretraži filmove i otkrij detalje o svojim omiljenim naslovima.
+              Pretraživač filmova sa filtrima po godini i žanru.
             </p>
-            <a href="movie.html" class="btn" data-sr="Pogledaj" data-en="View"
-              >Pogledaj</a
-            >
+            <div class="card-footer">
+              <span>OMDb API, Filter</span>
+              <a
+                href="movie.html"
+                class="btn-view"
+                data-sr="Otvori"
+                data-en="Open"
+                >Otvori</a
+              >
+            </div>
           </div>
 
           <div class="card">
-            <h3 data-sr="📚 Books App" data-en="📚 Books App">📚 Books App</h3>
+            <h3>📚 Book Finder</h3>
             <p
-              data-sr="Pretraži knjige i saznaj informacije o autorima i naslovima."
-              data-en="Search books and discover information about authors and titles."
+              data-sr="Aplikacija za pretraživanje knjiga iz Open Library baze. Pronađi omiljene knjige i autore sa lakoćom."
+              data-en="App for searching books from Open Library database. Find your favorite books and authors easily."
             >
-              Pretraži knjige i saznaj informacije o autorima i naslovima.
+              Pretraživanje knjiga iz Open Library baze.
             </p>
-            <a href="book.html" class="btn" data-sr="Pogledaj" data-en="View"
-              >Pogledaj</a
-            >
+            <div class="card-footer">
+              <span>Open Library API</span>
+              <a
+                href="book.html"
+                class="btn-view"
+                data-sr="Otvori"
+                data-en="Open"
+                >Otvori</a
+              >
+            </div>
           </div>
 
           <div class="card">
-            <h3 data-sr="🐷 Pig Game" data-en="🐷 Pig Game">🐷 Pig Game</h3>
+            <h3>🎲 Pig Game</h3>
             <p
-              data-sr="Zabavna društvena igra za dvoje — ko prvi stigne do 100 poena!"
-              data-en="Fun two-player game — first to reach 100 points wins!"
+              data-sr="Zabavna igra za dvoje igrača. Bacaj kocku i skupljaj poene, ali pazi - ako padne 1, gubiš sve! Prvi do 100 pobedjuje!"
+              data-en="Fun two-player game. Roll the dice and collect points, but be careful - if 1 comes up, you lose everything! First to 100 wins!"
             >
-              Zabavna društvena igra za dvoje — ko prvi stigne do 100 poena!
+              Zabavna igra za dvoje igrača sa nasumičnom kockom.
             </p>
-            <a href="pigGame.html" class="btn" data-sr="Igraj" data-en="Play"
-              >Igraj</a
-            >
+            <div class="card-footer">
+              <span>Game Logic, DOM</span>
+              <a
+                href="pigGame.html"
+                class="btn-view"
+                data-sr="Igraj"
+                data-en="Play"
+                >Igraj</a
+              >
+            </div>
           </div>
 
           <div class="card">
-            <h3 data-sr="🔢 Guess My Number" data-en="🔢 Guess My Number">
-              🔢 Guess My Number
-            </h3>
+            <h3>🎯 Guess My Number</h3>
             <p
-              data-sr="Pogodi broj koji je zamislio računar! Imaš li sreće?"
-              data-en="Guess the number the computer thought of! Are you lucky?"
+              data-sr="Pogađaj broj koju je računar zamislio! Imaš 20 pokušaja. Interaktivna igra sa povratnom informacijom."
+              data-en="Guess the number the computer thought of! You have 20 attempts. Interactive game with feedback."
             >
-              Pogodi broj koji je zamislio računar! Imaš li sreće?
+              Pogađaj broj sa povratnom informacijom i skoro stanjem.
             </p>
-            <a
-              href="guessNumber.html"
-              class="btn"
-              data-sr="Igraj"
-              data-en="Play"
-              >Pokušaj</a
-            >
+            <div class="card-footer">
+              <span>Game Mechanics</span>
+              <a
+                href="guessNumber.html"
+                class="btn-view"
+                data-sr="Igraj"
+                data-en="Play"
+                >Igraj</a
+              >
+            </div>
           </div>
+
           <div class="card">
-            <h3 data-sr="❌⭕ Игра X-O" data-en="❌⭕ X-O Game">
-              ❌⭕ Игра X-O
-            </h3>
+            <h3>❌⭕ X-O Game</h3>
             <p
-              data-sr="Класична X-O игра за двоје — одмјери своје стратегијске вјештине!"
-              data-en="Classic Tic-Tac-Toe game for two players — test your strategy skills!"
+              data-sr="Klasična Iks-Oks igra za dvoje. Strategija i taktika! "
+              data-en="Classic Tic-Tac-Toe game for two players. Strategy and tactics! "
             >
-              X-O игра за двоје !
+              Klasična Iks-Oks igra.
             </p>
-            <a
-              href="xoGame.html"
-              class="btn"
-              data-sr="Покрени игру"
-              data-en="Play Now"
-            >
-              Покрени игру
-            </a>
+            <div class="card-footer">
+              <span>Game </span>
+              <a
+                href="xoGame.html"
+                class="btn-view"
+                data-sr="Igraj"
+                data-en="Play"
+                >Igraj</a
+              >
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>© <span id="year"></span> Marko Vukovic</p>
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="footer-content">
+        <h3 data-sr="Hajde da radimo zajedno!" data-en="Let's work together!">
+          Hajde da radimo zajedno!
+        </h3>
+        <div class="social-links">
+          <a
+            href="https://github.com/vukovic411"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:markovukovic1000@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p
+          data-sr="© 2025 Marko Vuković - Sva prava zadržana"
+          data-en="© 2025 Marko Vuković - All rights reserved"
+        >
+          © 2025 Marko Vuković - Sva prava zadržana
+        </p>
+      </div>
     </footer>
 
     <script>
-      // Footer godina
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Switch jezika
       let currentLang = 'sr';
       document.getElementById('switchLang').addEventListener('click', () => {
         currentLang = currentLang === 'sr' ? 'en' : 'sr';
         document.querySelectorAll('[data-sr]').forEach(el => {
           el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.sr;
+        });
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
         });
       });
     </script>
